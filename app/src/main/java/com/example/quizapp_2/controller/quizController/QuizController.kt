@@ -72,6 +72,7 @@ class QuizController(private val quizData: QuizItems) {
 
     fun restartQuiz() {
         isGameFinished.value = false
+        points = 0
         availableQuestions.clear()
         availableQuestions.addAll(quizControllerItems)
         nextQuestion()
