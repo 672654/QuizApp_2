@@ -17,7 +17,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.example.quizapp_2.controller.galleryController.GalleryController
-import com.example.quizapp_2.data.QuizItem
 import com.example.quizapp_2.data.QuizItems
 import com.example.quizapp_2.views.gallery.GalleryScreen
 
@@ -28,9 +27,11 @@ class GalleryActivity: ComponentActivity() {
     //Declare a non-nullable var to be assigned in onCreate()
     private lateinit var controller: GalleryController
 
-
     /**
-     *
+     * start an activity to get an image url.
+     * contract - getContent is an intent
+     * give read permission
+     * add uri to controller
      */
     private val image = registerForActivityResult(
         ActivityResultContracts.GetContent()
